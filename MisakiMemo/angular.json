@@ -110,6 +110,11 @@
             "browserTarget": "MisakiMemo:build",
             "serverTarget": "MisakiMemo:server",
             "route": "shell"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "MisakiMemo:build:production"
+            }
           }
         }
       }
