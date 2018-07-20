@@ -6,10 +6,17 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { RouterModule } from '@angular/router';
+import { MainComponent } from './main/main.component';
+import { FilterComponent } from './filter/filter.component';
+import { ListComponent } from './list/list.component';
+import { SettingService } from './setting/setting.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    FilterComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -17,7 +24,7 @@ import { RouterModule } from '@angular/router';
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     RouterModule
   ],
-  providers: [],
+  providers: [SettingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
