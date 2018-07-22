@@ -3,9 +3,19 @@
  */
 export class IdolData{
     /**
+     * アイドルID
+     */
+    id: number;
+
+    /**
      * アイドル名
      */
     name: string;
+
+    /**
+     * アイドル名ルビ
+     */
+    ruby: string;
 
     /**
      * アイドルの属性

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../setting/database.service';
+import { SettingService } from '../setting/setting.service';
 
 @Component({
   selector: 'app-list',
@@ -9,7 +10,42 @@ import { DatabaseService } from '../setting/database.service';
 export class ListComponent implements OnInit {
 
   get idolNameList(): string[]{
-    return this.database.IdolList.map(idol => idol.name);
+    let list = this.database.IdolList;
+
+    // キャラ名フィルタ
+    const idolName = this.setting.data.idolName.value;
+    if(idolName != ""){
+      list = list.filter(idol => idol.name.includes(idolName) || idol.ruby.includes(idolName));
+    }
+
+    // 属性フィルタ
+    const idolType = this.setting.data.idolType.value;
+    if(idolType != "指定なし"){
+      list = list.filter(idol => idol.type == idolType);
+    }
+
+    // ソート処理
+    const descFlg = (this.setting.data.sortMode.value == "降順");
+    switch(this.setting.data.sortType.value){
+      case "アイドルID":
+        if(descFlg){
+          list = list.sort((b, a) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0);
+        }else{
+          list = list.sort((a, b) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0);
+        }
+      break;
+      case "アイドル名":
+      if(descFlg){
+        list = list.sort((b, a) => a.ruby > b.ruby ? 1 : a.ruby < b.ruby ? -1 : 0);
+      }else{
+        list = list.sort((a, b) => a.ruby > b.ruby ? 1 : a.ruby < b.ruby ? -1 : 0);
+      }
+      break;
+      case "進捗":
+      break;
+    }
+
+    return list.map(idol => idol.name);
   }
 
   stepList: string[] = [
@@ -26,7 +62,7 @@ export class ListComponent implements OnInit {
     "完了！"
   ];
 
-  constructor(private database: DatabaseService) { }
+  constructor(private database: DatabaseService, private setting: SettingService) { }
 
   ngOnInit() {
   }
