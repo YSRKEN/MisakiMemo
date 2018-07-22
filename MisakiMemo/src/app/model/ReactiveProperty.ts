@@ -1,4 +1,4 @@
-import { Subject } from "../../../node_modules/rxjs";
+import { Subject } from "rxjs";
 
 /**
  * 通知機能付きの変数

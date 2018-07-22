@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ReactiveProperty } from 'src/app/model/ReactiveProperty';
 import { SettingService } from '../setting/setting.service';
 
 @Component({
@@ -32,10 +31,6 @@ export class FilterComponent implements OnInit {
   constructor(private setting: SettingService) { }
 
   ngOnInit() {
-    this.idolName.subcribe((newValue) => console.log(newValue));
-    this.idolType.subcribe((newValue) => console.log(newValue));
-    this.sortType.subcribe((newValue) => console.log(newValue));
-    this.sortMode.subcribe((newValue) => console.log(newValue));
   }
 
 }

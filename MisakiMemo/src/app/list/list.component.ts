@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from '../setting/database.service';
 
 @Component({
   selector: 'app-list',
@@ -7,14 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  idolNameList: string[] = [
-    "天海春香",
-    "如月千早",
-    "星井美希",
-    "春日未来",
-    "最上静香",
-    "伊吹翼"
-  ];
+  get idolNameList(): string[]{
+    return this.database.IdolList.map(idol => idol.name);
+  }
 
   stepList: string[] = [
     "1. ユニットセンター",
@@ -30,7 +26,7 @@ export class ListComponent implements OnInit {
     "完了！"
   ];
 
-  constructor() { }
+  constructor(private database: DatabaseService) { }
 
   ngOnInit() {
   }
