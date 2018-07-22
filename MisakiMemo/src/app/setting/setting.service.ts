@@ -6,7 +6,26 @@ import { Setting } from './Setting';
 })
 export class SettingService {
 
-  data: Setting = new Setting();
+  /**
+   * 保存時に使用する定数
+   */
+  private readonly LOCAL_STRAGE_KEY: string = "saveData";
 
-  constructor() { }
+  data: Setting;
+
+  /**
+   * 設定を保存する処理
+   * @param saveData 設定情報(JSON文字列)
+   */
+  private saveFunc(saveData: string){
+    window.localStorage.setItem(this.LOCAL_STRAGE_KEY, saveData);
+  }
+
+  constructor() {
+    this.data = new Setting(this.saveFunc);
+    const saveData = window.localStorage.getItem(this.LOCAL_STRAGE_KEY);
+    if(saveData != null){
+      this.data.fromString(saveData);
+    }
+  }
 }
