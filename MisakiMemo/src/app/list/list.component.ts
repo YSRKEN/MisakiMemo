@@ -9,6 +9,30 @@ import { SettingService } from '../setting/setting.service';
 })
 export class ListComponent implements OnInit {
 
+  /**
+   * アイドル名→指定曲の対応表
+   */
+  private idolNameToMusic: {[key: string]: string} = {};
+
+  /**
+   * コンストラクタ
+   * @param database データベースサービス
+   * @param setting 設定サービス
+   */
+  constructor(private database: DatabaseService, private setting: SettingService) {
+  }
+
+  async ngOnInit() {
+    for(let idol of await this.database.getIdolList()){
+      console.log(idol);
+      this.idolNameToMusic[idol.name] = idol.music;
+    }
+    console.log(this.idolNameToMusic);
+  }
+
+  /**
+   * アイドル一覧を返却する
+   */
   get idolNameList(): string[]{
     let list = this.database.IdolList;
 
@@ -48,23 +72,23 @@ export class ListComponent implements OnInit {
     return list.map(idol => idol.name);
   }
 
-  stepList: string[] = [
-    "1. ユニットセンター",
-    "2. ソロライブ",
-    "3. 親愛度を+50",
-    "4. アイドルコミュ",
-    "5. お仕事",
-    "6. 劇場で触れ合い",
-    "7. 指定曲",
-    "8. 記念カードを覚醒",
-    "9. スキルLv.5",
-    "10. 親愛度を+200",
-    "完了！"
-  ];
-
-  constructor(private database: DatabaseService, private setting: SettingService) { }
-
-  ngOnInit() {
+  /**
+   * ステップ一覧を返却する
+   */
+  stepList(name: string): string[]{
+    const temp = [
+      "1. ユニットセンター",
+      "2. ソロライブ",
+      "3. 親愛度を+50",
+      "4. アイドルコミュ",
+      "5. お仕事",
+      "6. 劇場で触れ合い",
+      `7. 指定曲(${this.idolNameToMusic[name]})`,
+      "8. 記念カードを覚醒",
+      "9. スキルLv.5",
+      "10. 親愛度を+200",
+      "完了！"
+    ];
+    return temp;
   }
-
 }
