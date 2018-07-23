@@ -10,9 +10,9 @@ import { RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
 import { FilterComponent } from './filter/filter.component';
 import { ListComponent } from './list/list.component';
-import { SettingService } from './setting/setting.service';
-import { HttpClientModule } from '../../node_modules/@angular/common/http';
-import { DatabaseService } from './setting/database.service';
+import { SettingService } from './service/setting.service';
+import { HttpClientModule } from '@angular/common/http';
+import { DatabaseService } from './service/database.service';
 
 @NgModule({
   declarations: [

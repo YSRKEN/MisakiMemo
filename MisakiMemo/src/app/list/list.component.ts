@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DatabaseService } from '../setting/database.service';
-import { SettingService } from '../setting/setting.service';
+import { DatabaseService } from '../service/database.service';
+import { SettingService } from '../service/setting.service';
 
 @Component({
   selector: 'app-list',
@@ -24,10 +24,8 @@ export class ListComponent implements OnInit {
 
   async ngOnInit() {
     for(let idol of await this.database.getIdolList()){
-      console.log(idol);
       this.idolNameToMusic[idol.name] = idol.music;
     }
-    console.log(this.idolNameToMusic);
   }
 
   /**
