@@ -13,6 +13,7 @@ export class SettingService {
    * @param saveData 設定情報(JSON文字列)
    */
   private saveFunc(saveData: string){
+    console.log("saveFunc");
     window.localStorage.setItem("saveData", saveData);
   }
 

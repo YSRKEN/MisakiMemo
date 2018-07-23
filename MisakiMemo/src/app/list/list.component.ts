@@ -73,20 +73,20 @@ export class ListComponent implements OnInit {
   /**
    * ステップ一覧を返却する
    */
-  stepList(name: string): string[]{
+  stepList(name: string): {key: string, value: string}[]{
     const temp = [
-      "1. ユニットセンター",
-      "2. ソロライブ",
-      "3. 親愛度を+50",
-      "4. アイドルコミュ",
-      "5. お仕事",
-      "6. 劇場で触れ合い",
-      `7. 指定曲(${this.idolNameToMusic[name]})`,
-      "8. 記念カードを覚醒",
-      "9. スキルLv.5",
-      "10. 親愛度を+200",
-      "11. SSR+にする",
-      "完了！"
+      {key: "1", value: "1. ユニットセンター"},
+      {key: "2", value: "2. ソロライブ"},
+      {key: "3", value: "3. 親愛度を+50"},
+      {key: "4", value: "4. アイドルコミュ"},
+      {key: "5", value: "5. お仕事"},
+      {key: "6", value: "6. 劇場で触れ合い"},
+      {key: "7", value: `7. 指定曲(${this.idolNameToMusic[name]})`},
+      {key: "8", value: "8. 記念カードを覚醒"},
+      {key: "9", value: "9. スキルLv.5"},
+      {key: "10", value: "10. 親愛度を+200"},
+      {key: "11", value: "11. SSR+にする"},
+      {key: "12", value: "完了！"}
     ];
     return temp;
   }

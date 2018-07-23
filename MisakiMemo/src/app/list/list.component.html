@@ -12,7 +12,7 @@
         <td class="text-nowrap">{{idolName}}</td>
         <td>
           <select class="w-100 mt-0_5">
-            <option *ngFor="let step of stepList(idolName)" value={{step}}>{{step}}</option>
+            <option *ngFor="let step of stepList(idolName)" value={{step.key}}>{{step.value}}</option>
           </select>
         </td>
         <td>
