@@ -87,6 +87,7 @@ export class ListComponent implements OnInit {
       "8. 記念カードを覚醒",
       "9. スキルLv.5",
       "10. 親愛度を+200",
+      "11. SSR+にする",
       "完了！"
     ];
     return temp;
