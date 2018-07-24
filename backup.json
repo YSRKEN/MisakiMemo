@@ -8,7 +8,7 @@
             "name": "天海春香",
             "step": "5",
             "id": 1,
-            "music": "\r",
+            "music": "HOME, SWEET FRIENDSHIP\r",
             "ruby": "あまみはるか",
             "type": "Princess",
             "comment": ""
@@ -26,7 +26,7 @@
             "name": "星井美希",
             "step": "5",
             "id": 3,
-            "music": "\r",
+            "music": "星屑のシンフォニア\r",
             "ruby": "ほしいみき",
             "type": "Angel",
             "comment": ""
@@ -35,7 +35,7 @@
             "name": "萩原雪歩",
             "step": "5",
             "id": 4,
-            "music": "\r",
+            "music": "Birth of Color\r",
             "ruby": "はぎわらゆきほ",
             "type": "Princess",
             "comment": ""
@@ -44,7 +44,7 @@
             "name": "高槻やよい",
             "step": "7",
             "id": 5,
-            "music": "\r",
+            "music": "合言葉はスタートアップ！\r",
             "ruby": "たかつきやよい",
             "type": "Angel",
             "comment": ""
@@ -89,7 +89,7 @@
             "name": "三浦あずさ",
             "step": "6",
             "id": 10,
-            "music": "\r",
+            "music": "Birth of Color\r",
             "ruby": "みうらあずさ",
             "type": "Angel",
             "comment": ""
@@ -98,7 +98,7 @@
             "name": "双海亜美",
             "step": "5",
             "id": 11,
-            "music": "\r",
+            "music": "合言葉はスタートアップ！\r",
             "ruby": "ふたみあみ",
             "type": "Angel",
             "comment": ""
@@ -107,7 +107,7 @@
             "name": "双海真美",
             "step": "5",
             "id": 12,
-            "music": "\r",
+            "music": "ドリームトラベラー\r",
             "ruby": "ふたみまみ",
             "type": "Angel",
             "comment": ""
@@ -116,7 +116,7 @@
             "name": "我那覇響",
             "step": "6",
             "id": 13,
-            "music": "\r",
+            "music": "合言葉はスタートアップ！\r",
             "ruby": "がなはひびき",
             "type": "Princess",
             "comment": ""
@@ -125,7 +125,7 @@
             "name": "春日未来",
             "step": "5",
             "id": 14,
-            "music": "\r",
+            "music": "Growing Storm!\r",
             "ruby": "かすがみらい",
             "type": "Princess",
             "comment": ""
@@ -134,7 +134,7 @@
             "name": "最上静香",
             "step": "7",
             "id": 15,
-            "music": "\r",
+            "music": "Shooting Stars\r",
             "ruby": "もがみしずか",
             "type": "Fairy",
             "comment": ""
@@ -143,7 +143,7 @@
             "name": "伊吹翼",
             "step": "5",
             "id": 16,
-            "music": "\r",
+            "music": "Growing Storm!\r",
             "ruby": "いぶきつばさ",
             "type": "Angel",
             "comment": ""
@@ -152,7 +152,7 @@
             "name": "田中琴葉",
             "step": "5",
             "id": 17,
-            "music": "\r",
+            "music": "ジレるハートに火をつけて\r",
             "ruby": "たなかことは",
             "type": "Princess",
             "comment": ""
@@ -161,7 +161,7 @@
             "name": "島原エレナ",
             "step": "6",
             "id": 18,
-            "music": "\r",
+            "music": "STANDING ALIVE\r",
             "ruby": "しまばらえれな",
             "type": "Angel",
             "comment": ""
@@ -170,7 +170,7 @@
             "name": "佐竹美奈子",
             "step": "7",
             "id": 19,
-            "music": "\r",
+            "music": "ドリームトラベラー\r",
             "ruby": "さたけみなこ",
             "type": "Princess",
             "comment": ""
@@ -179,7 +179,7 @@
             "name": "所恵美",
             "step": "5",
             "id": 20,
-            "music": "\r",
+            "music": "ジレるハートに火をつけて\r",
             "ruby": "ところめぐみ",
             "type": "Fairy",
             "comment": ""
@@ -188,7 +188,7 @@
             "name": "徳川まつり",
             "step": "5",
             "id": 21,
-            "music": "\r",
+            "music": "Eternal Harmony\r",
             "ruby": "とくがわまつり",
             "type": "Princess",
             "comment": ""
@@ -197,7 +197,7 @@
             "name": "箱崎星梨花",
             "step": "2",
             "id": 22,
-            "music": "\r",
+            "music": "Shooting Stars\r",
             "ruby": "はこざきせりか",
             "type": "Angel",
             "comment": ""
@@ -206,7 +206,7 @@
             "name": "野々原茜",
             "step": "2",
             "id": 23,
-            "music": "\r",
+            "music": "Shooting Stars\r",
             "ruby": "ののはらあかね",
             "type": "Angel",
             "comment": ""
@@ -215,7 +215,7 @@
             "name": "望月杏奈",
             "step": "2",
             "id": 24,
-            "music": "\r",
+            "music": "Growing Storm!\r",
             "ruby": "もちづきあんな",
             "type": "Angel",
             "comment": ""
@@ -233,7 +233,7 @@
             "name": "七尾百合子",
             "step": "6",
             "id": 26,
-            "music": "\r",
+            "music": "Growing Storm!\r",
             "ruby": "ななおゆりこ",
             "type": "Princess",
             "comment": ""
@@ -242,7 +242,7 @@
             "name": "高山紗代子",
             "step": "6",
             "id": 27,
-            "music": "\r",
+            "music": "星屑のシンフォニア\r",
             "ruby": "たかやまさよこ",
             "type": "Princess",
             "comment": ""
@@ -251,7 +251,7 @@
             "name": "松田亜利沙",
             "step": "5",
             "id": 28,
-            "music": "\r",
+            "music": "HOME, SWEET FRIENDSHIP\r",
             "ruby": "まつだありさ",
             "type": "Princess",
             "comment": ""
@@ -260,7 +260,7 @@
             "name": "高坂海美",
             "step": "5",
             "id": 29,
-            "music": "\r",
+            "music": "ジレるハートに火をつけて\r",
             "ruby": "こうさかうみみ",
             "type": "Princess",
             "comment": ""
@@ -269,7 +269,7 @@
             "name": "中谷育",
             "step": "5",
             "id": 30,
-            "music": "\r",
+            "music": "ドリームトラベラー\r",
             "ruby": "なかたにいく",
             "type": "Princess",
             "comment": ""
@@ -305,7 +305,7 @@
             "name": "舞浜歩",
             "step": "6",
             "id": 34,
-            "music": "\r",
+            "music": "Birth of Color\r",
             "ruby": "まいはまあゆむ",
             "type": "Fairy",
             "comment": ""
@@ -314,7 +314,7 @@
             "name": "木下ひなた",
             "step": "2",
             "id": 35,
-            "music": "\r",
+            "music": "ドリームトラベラー\r",
             "ruby": "きのしたひなた",
             "type": "Angel",
             "comment": ""
@@ -323,7 +323,7 @@
             "name": "矢吹可奈",
             "step": "5",
             "id": 36,
-            "music": "\r",
+            "music": "Birth of Color\r",
             "ruby": "やぶきかな",
             "type": "Princess",
             "comment": ""
@@ -332,7 +332,7 @@
             "name": "横山奈緒",
             "step": "5",
             "id": 37,
-            "music": "\r",
+            "music": "HOME, SWEET FRIENDSHIP\r",
             "ruby": "よこやまなお",
             "type": "Princess",
             "comment": ""
@@ -350,7 +350,7 @@
             "name": "馬場このみ",
             "step": "2",
             "id": 39,
-            "music": "\r",
+            "music": "ドリームトラベラー\r",
             "ruby": "ばばこのみ",
             "type": "Angel",
             "comment": ""
@@ -359,7 +359,7 @@
             "name": "大神環",
             "step": "2",
             "id": 40,
-            "music": "\r",
+            "music": "ジレるハートに火をつけて\r",
             "ruby": "おおがみたまき",
             "type": "Angel",
             "comment": ""
@@ -368,7 +368,7 @@
             "name": "豊川風花",
             "step": "5",
             "id": 41,
-            "music": "\r",
+            "music": "Eternal Harmony\r",
             "ruby": "とよかわふうか",
             "type": "Angel",
             "comment": ""
@@ -377,7 +377,7 @@
             "name": "宮尾美也",
             "step": "2",
             "id": 42,
-            "music": "\r",
+            "music": "ジレるハートに火をつけて\r",
             "ruby": "みやおみや",
             "type": "Angel",
             "comment": ""
@@ -386,7 +386,7 @@
             "name": "福田のり子",
             "step": "5",
             "id": 43,
-            "music": "\r",
+            "music": "HOME, SWEET FRIENDSHIP\r",
             "ruby": "ふくだのりこ",
             "type": "Princess",
             "comment": ""
@@ -404,7 +404,7 @@
             "name": "篠宮可憐",
             "step": "1",
             "id": 45,
-            "music": "\r",
+            "music": "STANDING ALIVE\r",
             "ruby": "しのみやかれん",
             "type": "Angel",
             "comment": ""
@@ -422,7 +422,7 @@
             "name": "永吉昴",
             "step": "6",
             "id": 47,
-            "music": "\r",
+            "music": "星屑のシンフォニア\r",
             "ruby": "ながたにすばる",
             "type": "Fairy",
             "comment": ""
@@ -431,7 +431,7 @@
             "name": "北上麗花",
             "step": "5",
             "id": 48,
-            "music": "\r",
+            "music": "Shooting Stars\r",
             "ruby": "きたかみれいか",
             "type": "Angel",
             "comment": ""
@@ -467,7 +467,7 @@
             "name": "桜守歌織",
             "step": "1",
             "id": 52,
-            "music": "",
+            "music": "花ざかりWeekend✿",
             "ruby": "さくらもりかおり",
             "type": "Angel",
             "comment": ""
