@@ -45,6 +45,10 @@ export class Setting {
             const idolMemo = new IdolMemo();
             idolMemo.name = temp2.name;
             idolMemo.step = temp2.step;
+            idolMemo.id = temp2.id;
+            idolMemo.music = temp2.music;
+            idolMemo.ruby = temp2.ruby;
+            idolMemo.type = temp2.type;
             idolMemo.comment = temp2.comment;
             this.idolStepMemo.push(idolMemo);
         }

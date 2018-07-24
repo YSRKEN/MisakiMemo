@@ -38,47 +38,56 @@ export class ListComponent implements OnInit {
    * アイドル一覧を返却する
    */
   get idolList(): IdolMemo[] {
-    let list = this.database.IdolList;
+    let list = this.setting.data.idolStepMemo;
 
-    // キャラ名フィルタ
+    // フィルタ情報を作成
+    const filter = {};
+    //キャラ名フィルタ
     const idolName = this.setting.data.idolName;
-    if (idolName != "") {
-      list = list.filter(idol => idol.name.includes(idolName) || idol.ruby.includes(idolName));
+    if(idolName != ""){
+      for(let x of list){
+        if(!x.name.includes(idolName) && !x.ruby.includes(idolName)){
+          filter[x.name] = true;
+        }
+      }
     }
-
-    // 属性フィルタ
+    //属性フィルタ
     const idolType = this.setting.data.idolType;
     if (idolType != "指定なし") {
-      list = list.filter(idol => idol.type == idolType);
+      for(let x of list){
+        if(x.type != idolType){
+          filter[x.name] = true;
+        }
+      }
     }
 
-    const hash = {};
-    for (let temp of list) {
-      hash[temp.name] = true;
-    }
-
-    // ソート処理
-    const stepMemo = this.setting.data.idolStepMemo;
+    // フィルタ・ソート処理
     const descFlg = (this.setting.data.sortMode == "降順");
     switch (this.setting.data.sortType) {
       case "アイドルID":
         if (descFlg) {
-          list = list.sort((b, a) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0);
+          return list.filter(n => typeof filter[n.name] == "undefined").sort((b, a) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0);
         } else {
-          list = list.sort((a, b) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0);
+          return list.filter(n => typeof filter[n.name] == "undefined").sort((a, b) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0);
         }
         break;
       case "アイドル名":
         if (descFlg) {
-          list = list.sort((b, a) => a.ruby > b.ruby ? 1 : a.ruby < b.ruby ? -1 : 0);
+          return list.filter(n => typeof filter[n.name] == "undefined").sort((b, a) => a.ruby > b.ruby ? 1 : a.ruby < b.ruby ? -1 : 0);
         } else {
-          list = list.sort((a, b) => a.ruby > b.ruby ? 1 : a.ruby < b.ruby ? -1 : 0);
+          return list.filter(n => typeof filter[n.name] == "undefined").sort((a, b) => a.ruby > b.ruby ? 1 : a.ruby < b.ruby ? -1 : 0);
         }
         break;
       case "進捗":
+        if (descFlg) {
+          return list.filter(n => typeof filter[n.name] == "undefined").sort((b, a) => parseInt(a.step) > parseInt(b.step) ? 1 : parseInt(a.step) < parseInt(b.step) ? -1 : 0);
+        } else {
+          return list.filter(n => typeof filter[n.name] == "undefined").sort((a, b) => parseInt(a.step) > parseInt(b.step) ? 1 : parseInt(a.step) < parseInt(b.step) ? -1 : 0);
+        }
         break;
+      default:
+        return list.filter(n => typeof filter[n.name] == "undefined");
     }
-    return stepMemo.filter(key => hash[key.name] != null);
   }
 
   /**

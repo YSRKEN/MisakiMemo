@@ -1,0 +1,476 @@
+{
+    "idolName": "",
+    "idolType": "指定なし",
+    "sortType": "アイドルID",
+    "sortMode": "昇順",
+    "idolStepMemo": [
+        {
+            "name": "天海春香",
+            "step": "5",
+            "id": 1,
+            "music": "\r",
+            "ruby": "あまみはるか",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "如月千早",
+            "step": "12",
+            "id": 2,
+            "music": "Eternal Harmony\r",
+            "ruby": "きさらぎちはや",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "星井美希",
+            "step": "5",
+            "id": 3,
+            "music": "\r",
+            "ruby": "ほしいみき",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "萩原雪歩",
+            "step": "5",
+            "id": 4,
+            "music": "\r",
+            "ruby": "はぎわらゆきほ",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "高槻やよい",
+            "step": "7",
+            "id": 5,
+            "music": "\r",
+            "ruby": "たかつきやよい",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "菊地真",
+            "step": "9",
+            "id": 6,
+            "music": "Birth of Color\r",
+            "ruby": "きくちまこと",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "水瀬伊織",
+            "step": "9",
+            "id": 7,
+            "music": "合言葉はスタートアップ！\r",
+            "ruby": "みなせいおり",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "四条貴音",
+            "step": "9",
+            "id": 8,
+            "music": "STANDING ALIVE\r",
+            "ruby": "しじょうたかね",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "秋月律子",
+            "step": "9",
+            "id": 9,
+            "music": "合言葉はスタートアップ！\r",
+            "ruby": "あきづきりつこ",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "三浦あずさ",
+            "step": "6",
+            "id": 10,
+            "music": "\r",
+            "ruby": "みうらあずさ",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "双海亜美",
+            "step": "5",
+            "id": 11,
+            "music": "\r",
+            "ruby": "ふたみあみ",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "双海真美",
+            "step": "5",
+            "id": 12,
+            "music": "\r",
+            "ruby": "ふたみまみ",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "我那覇響",
+            "step": "6",
+            "id": 13,
+            "music": "\r",
+            "ruby": "がなはひびき",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "春日未来",
+            "step": "5",
+            "id": 14,
+            "music": "\r",
+            "ruby": "かすがみらい",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "最上静香",
+            "step": "7",
+            "id": 15,
+            "music": "\r",
+            "ruby": "もがみしずか",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "伊吹翼",
+            "step": "5",
+            "id": 16,
+            "music": "\r",
+            "ruby": "いぶきつばさ",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "田中琴葉",
+            "step": "5",
+            "id": 17,
+            "music": "\r",
+            "ruby": "たなかことは",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "島原エレナ",
+            "step": "6",
+            "id": 18,
+            "music": "\r",
+            "ruby": "しまばらえれな",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "佐竹美奈子",
+            "step": "7",
+            "id": 19,
+            "music": "\r",
+            "ruby": "さたけみなこ",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "所恵美",
+            "step": "5",
+            "id": 20,
+            "music": "\r",
+            "ruby": "ところめぐみ",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "徳川まつり",
+            "step": "5",
+            "id": 21,
+            "music": "\r",
+            "ruby": "とくがわまつり",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "箱崎星梨花",
+            "step": "2",
+            "id": 22,
+            "music": "\r",
+            "ruby": "はこざきせりか",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "野々原茜",
+            "step": "2",
+            "id": 23,
+            "music": "\r",
+            "ruby": "ののはらあかね",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "望月杏奈",
+            "step": "2",
+            "id": 24,
+            "music": "\r",
+            "ruby": "もちづきあんな",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "ロコ",
+            "step": "7",
+            "id": 25,
+            "music": "STANDING ALIVE\r",
+            "ruby": "はんだろこ(伴田路子)",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "七尾百合子",
+            "step": "6",
+            "id": 26,
+            "music": "\r",
+            "ruby": "ななおゆりこ",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "高山紗代子",
+            "step": "6",
+            "id": 27,
+            "music": "\r",
+            "ruby": "たかやまさよこ",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "松田亜利沙",
+            "step": "5",
+            "id": 28,
+            "music": "\r",
+            "ruby": "まつだありさ",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "高坂海美",
+            "step": "5",
+            "id": 29,
+            "music": "\r",
+            "ruby": "こうさかうみみ",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "中谷育",
+            "step": "5",
+            "id": 30,
+            "music": "\r",
+            "ruby": "なかたにいく",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "天空橋朋花",
+            "step": "9",
+            "id": 31,
+            "music": "星屑のシンフォニア\r",
+            "ruby": "てんくうばしともか",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "エミリー",
+            "step": "6",
+            "id": 32,
+            "music": "Eternal Harmony\r",
+            "ruby": "えみりーすちゅあーと",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "北沢志保",
+            "step": "9",
+            "id": 33,
+            "music": "Shooting Stars\r",
+            "ruby": "きたざわしほ",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "舞浜歩",
+            "step": "6",
+            "id": 34,
+            "music": "\r",
+            "ruby": "まいはまあゆむ",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "木下ひなた",
+            "step": "2",
+            "id": 35,
+            "music": "\r",
+            "ruby": "きのしたひなた",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "矢吹可奈",
+            "step": "5",
+            "id": 36,
+            "music": "\r",
+            "ruby": "やぶきかな",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "横山奈緒",
+            "step": "5",
+            "id": 37,
+            "music": "\r",
+            "ruby": "よこやまなお",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "二階堂千鶴",
+            "step": "11",
+            "id": 38,
+            "music": "星屑のシンフォニア\r",
+            "ruby": "にかいどうちづる",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "馬場このみ",
+            "step": "2",
+            "id": 39,
+            "music": "\r",
+            "ruby": "ばばこのみ",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "大神環",
+            "step": "2",
+            "id": 40,
+            "music": "\r",
+            "ruby": "おおがみたまき",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "豊川風花",
+            "step": "5",
+            "id": 41,
+            "music": "\r",
+            "ruby": "とよかわふうか",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "宮尾美也",
+            "step": "2",
+            "id": 42,
+            "music": "\r",
+            "ruby": "みやおみや",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "福田のり子",
+            "step": "5",
+            "id": 43,
+            "music": "\r",
+            "ruby": "ふくだのりこ",
+            "type": "Princess",
+            "comment": ""
+        },
+        {
+            "name": "真壁瑞希",
+            "step": "9",
+            "id": 44,
+            "music": "Growing Storm!\r",
+            "ruby": "まかべみづき",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "篠宮可憐",
+            "step": "1",
+            "id": 45,
+            "music": "\r",
+            "ruby": "しのみやかれん",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "百瀬莉緒",
+            "step": "10",
+            "id": 46,
+            "music": "STANDING ALIVE\r",
+            "ruby": "ももせりお",
+            "type": "Fairy",
+            "comment": "0"
+        },
+        {
+            "name": "永吉昴",
+            "step": "6",
+            "id": 47,
+            "music": "\r",
+            "ruby": "ながたにすばる",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "北上麗花",
+            "step": "5",
+            "id": 48,
+            "music": "\r",
+            "ruby": "きたかみれいか",
+            "type": "Angel",
+            "comment": ""
+        },
+        {
+            "name": "周防桃子",
+            "step": "9",
+            "id": 49,
+            "music": "HOME, SWEET FRIENDSHIP\r",
+            "ruby": "すおうももこ",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "ジュリア",
+            "step": "9",
+            "id": 50,
+            "music": "Eternal Harmony\r",
+            "ruby": "じゅりあ",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "白石紬",
+            "step": "9",
+            "id": 51,
+            "music": "Melty Fantasia\r",
+            "ruby": "しらいしつむぎ",
+            "type": "Fairy",
+            "comment": ""
+        },
+        {
+            "name": "桜守歌織",
+            "step": "1",
+            "id": 52,
+            "music": "",
+            "ruby": "さくらもりかおり",
+            "type": "Angel",
+            "comment": ""
+        }
+    ]
+}
