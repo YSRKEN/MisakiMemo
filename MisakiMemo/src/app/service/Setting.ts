@@ -1,4 +1,3 @@
-import { ReactiveProperty } from "../model/ReactiveProperty";
 import { IdolMemo } from "./IdolMemo";
 
 /**
@@ -8,22 +7,22 @@ export class Setting {
     /**
      * アイドル名で絞り込むための入力
      */
-    idolName = new ReactiveProperty<string>("");
+    idolName = "";
 
     /**
      * アイドルの属性で絞り込むための入力
      */
-    idolType = new ReactiveProperty<string>("指定なし");
+    idolType = "指定なし";
 
     /**
      * リストの並び替え方法
      */
-    sortType = new ReactiveProperty<string>("アイドルID");
+    sortType = "アイドルID";
 
     /**
      * リストの並び替え方向
      */
-    sortMode = new ReactiveProperty<string>("昇順");
+    sortMode = "昇順";
 
     /**
      * アイドル毎の進捗状況
@@ -31,34 +30,15 @@ export class Setting {
     idolStepMemo: IdolMemo[] = [];
 
     /**
-     * 設定を保存するメソッド
-     */
-    private saveFunc: (saveData: string) => void;
-
-    /**
-     * コンストラクタ
-     * @param func セーブするロジック
-     */
-    constructor(func: (saveData: string) => void) {
-        this.saveFunc = func;
-
-        // 設定が変更された際に保存処理が走るようにする
-        this.idolName.subcribe(() => this.saveFunc(this.toString()));
-        this.idolType.subcribe(() => this.saveFunc(this.toString()));
-        this.sortType.subcribe(() => this.saveFunc(this.toString()));
-        this.sortMode.subcribe(() => this.saveFunc(this.toString()));
-    }
-
-    /**
      * JSON文字列から変換
      * @param jsonString セーブデータ
      */
     fromString(jsonString: string) {
         const data = JSON.parse(jsonString);
-        this.idolName.value = data["idolName"];
-        this.idolType.value = data["idolType"];
-        this.sortType.value = data["sortType"];
-        this.sortMode.value = data["sortMode"];
+        this.idolName = data["idolName"];
+        this.idolType = data["idolType"];
+        this.sortType = data["sortType"];
+        this.sortMode = data["sortMode"];
         const temp: IdolMemo[] = data["idolStepMemo"];
         this.idolStepMemo = [];
         for(let temp2 of temp){
@@ -75,10 +55,10 @@ export class Setting {
      */
     toString(): string {
         const data = {};
-        data["idolName"] = this.idolName.value;
-        data["idolType"] = this.idolType.value;
-        data["sortType"] = this.sortType.value;
-        data["sortMode"] = this.sortMode.value;
+        data["idolName"] = this.idolName;
+        data["idolType"] = this.idolType;
+        data["sortType"] = this.sortType;
+        data["sortMode"] = this.sortMode;
         data["idolStepMemo"] = this.idolStepMemo;
         return JSON.stringify(data);
     }

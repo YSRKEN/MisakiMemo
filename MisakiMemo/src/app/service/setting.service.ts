@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Setting } from './Setting';
-import { DatabaseService } from './database.service';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +18,7 @@ export class SettingService {
   }
 
   constructor() {
-    this.data = new Setting(this.saveFunc);
+    this.data = new Setting();
     const saveData = window.localStorage.getItem("saveData");
     if(saveData != null){
       this.data.fromString(saveData);

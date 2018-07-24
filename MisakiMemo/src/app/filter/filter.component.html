@@ -3,12 +3,12 @@
     <div class="form-group d-flex">
       <label class="text-nowrap mr-3 mt-1_5" for="idolName">キャラ名</label>
       <input type="text" class="form-control" id="idolName" name="idolName" placeholder="キャラ名で絞り込み"
-        [(ngModel)]="idolName.value">
+        [ngModel]="idolName" (ngModelChange)="changeIdolName($event)">
     </div>
     <div class="form-group d-flex">
       <label class="text-nowrap mr-3 mt-1_5" for="idolType">属性</label>
       <select class="form-control" id="idolType" name="idolType"
-        [(ngModel)]="idolType.value">
+        [ngModel]="idolType" (ngModelChange)="changeIdolType($event)">
         <option>指定なし</option>
         <option class="text-danger font-weight-bold">Princess</option>
         <option class="text-primary font-weight-bold">Fairy</option>
@@ -17,12 +17,14 @@
     </div>
     <div class="form-group d-flex">
       <label class="text-nowrap mr-3 mt-1_5" for="sortType">ソート</label>
-      <select class="form-control mr-3" id="sortType" name="sortType" [(ngModel)]="sortType.value">
+      <select class="form-control mr-3" id="sortType" name="sortType"
+      [ngModel]="sortType" (ngModelChange)="changeSortType($event)">
         <option class="font-weight-bold">アイドルID</option>
         <option class="font-weight-bold">アイドル名</option>
         <option class="font-weight-bold">進捗</option>
       </select>
-      <select class="form-control sort-mode" id="sortMode" name="sortMode" [(ngModel)]="sortMode.value">
+      <select class="form-control sort-mode" id="sortMode" name="sortMode"
+        [ngModel]="sortMode" (ngModelChange)="changeSortMode($event)">
         <option class="font-weight-bold">昇順</option>
         <option class="font-weight-bold">降順</option>
       </select>

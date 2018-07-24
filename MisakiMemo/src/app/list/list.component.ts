@@ -13,9 +13,9 @@ export class ListComponent implements OnInit {
   /**
    * アイドル名→指定曲の対応表
    */
-  private idolNameToMusic: {[key: string]: string} = {};
+  private idolNameToMusic: { [key: string]: string } = {};
 
-  private idolHash: {[key: string]: number} = {};
+  private idolHash: { [key: string]: number } = {};
 
   /**
    * コンストラクタ
@@ -27,7 +27,7 @@ export class ListComponent implements OnInit {
 
   async ngOnInit() {
     let index = 0;
-    for(let idol of await this.database.getIdolList()){
+    for (let idol of await this.database.getIdolList()) {
       this.idolHash[idol.name] = index;
       ++index;
       this.idolNameToMusic[idol.name] = idol.music;
@@ -37,68 +37,67 @@ export class ListComponent implements OnInit {
   /**
    * アイドル一覧を返却する
    */
-  get idolList(): IdolMemo[]{
+  get idolList(): IdolMemo[] {
     let list = this.database.IdolList;
 
     // キャラ名フィルタ
-    const idolName = this.setting.data.idolName.value;
-    if(idolName != ""){
+    const idolName = this.setting.data.idolName;
+    if (idolName != "") {
       list = list.filter(idol => idol.name.includes(idolName) || idol.ruby.includes(idolName));
     }
 
     // 属性フィルタ
-    const idolType = this.setting.data.idolType.value;
-    if(idolType != "指定なし"){
+    const idolType = this.setting.data.idolType;
+    if (idolType != "指定なし") {
       list = list.filter(idol => idol.type == idolType);
     }
 
-    // ソート処理
-    const descFlg = (this.setting.data.sortMode.value == "降順");
-    switch(this.setting.data.sortType.value){
-      case "アイドルID":
-        if(descFlg){
-          list = list.sort((b, a) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0);
-        }else{
-          list = list.sort((a, b) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0);
-        }
-      break;
-      case "アイドル名":
-      if(descFlg){
-        list = list.sort((b, a) => a.ruby > b.ruby ? 1 : a.ruby < b.ruby ? -1 : 0);
-      }else{
-        list = list.sort((a, b) => a.ruby > b.ruby ? 1 : a.ruby < b.ruby ? -1 : 0);
-      }
-      break;
-      case "進捗":
-      break;
-    }
-
     const hash = {};
-    for(let temp of list){
+    for (let temp of list) {
       hash[temp.name] = true;
     }
 
+    // ソート処理
     const stepMemo = this.setting.data.idolStepMemo;
+    const descFlg = (this.setting.data.sortMode == "降順");
+    switch (this.setting.data.sortType) {
+      case "アイドルID":
+        if (descFlg) {
+          list = list.sort((b, a) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0);
+        } else {
+          list = list.sort((a, b) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0);
+        }
+        break;
+      case "アイドル名":
+        if (descFlg) {
+          list = list.sort((b, a) => a.ruby > b.ruby ? 1 : a.ruby < b.ruby ? -1 : 0);
+        } else {
+          list = list.sort((a, b) => a.ruby > b.ruby ? 1 : a.ruby < b.ruby ? -1 : 0);
+        }
+        break;
+      case "進捗":
+        break;
+    }
     return stepMemo.filter(key => hash[key.name] != null);
   }
 
   /**
    * ステップ一覧を返却する
    */
-  stepList(name: string): {key: string, value: string}[]{
+  stepList(name: string): { key: string, value: string }[] {
     const temp = [
-      {key: "1", value: "1. ユニットセンター"},
-      {key: "2", value: "2. ソロライブ"},
-      {key: "3", value: "3. 親愛度を+50"},
-      {key: "4", value: "4. アイドルコミュ"},
-      {key: "5", value: "5. お仕事"},
-      {key: "6", value: "6. 劇場で触れ合い"},
-      {key: "7", value: `7. 指定曲(${this.idolNameToMusic[name]})`},
-      {key: "8", value: "8. 記念カードを覚醒"},
-      {key: "9", value: "9. スキルLv.5"},
-      {key: "10", value: "10. 親愛度を+200"},
-      {key: "11", value: "11. SSR+にする"},
-      {key: "12", value: "完了！"}
+      { key: "1", value: "1. ユニットセンター" },
+      { key: "2", value: "2. ソロライブ" },
+      { key: "3", value: "3. 親愛度を+50" },
+      { key: "4", value: "4. アイドルコミュ" },
+      { key: "5", value: "5. お仕事" },
+      { key: "6", value: "6. 劇場で触れ合い" },
+      { key: "7", value: `7. 指定曲(${this.idolNameToMusic[name]})` },
+      { key: "8", value: "8. 記念カードを覚醒" },
+      { key: "9", value: "9. スキルLv.5" },
+      { key: "10", value: "10. 親愛度を+200" },
+      { key: "11", value: "11. SSR+にする" },
+      { key: "12", value: "完了！" }
     ];
     return temp;
   }
@@ -108,7 +107,7 @@ export class ListComponent implements OnInit {
    * @param step 進捗
    * @param name アイドル名
    */
-  changeStep(step: string, name: string){
+  changeStep(step: string, name: string) {
     this.setting.data.idolStepMemo[this.idolHash[name]].step = step;
     this.setting.save();
   }
@@ -118,7 +117,7 @@ export class ListComponent implements OnInit {
    * @param comment 詳細
    * @param name アイドル名
    */
-  changeComment(comment: string, name: string){
+  changeComment(comment: string, name: string) {
     this.setting.data.idolStepMemo[this.idolHash[name]].comment = comment;
     this.setting.save();
   }

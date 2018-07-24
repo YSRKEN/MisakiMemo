@@ -1,5 +1,3 @@
-import { ReactiveProperty } from "../model/ReactiveProperty";
-
 /**
  * アイドルの進捗情報
  */

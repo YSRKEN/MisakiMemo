@@ -33,4 +33,23 @@ export class FilterComponent implements OnInit {
   ngOnInit() {
   }
 
+  changeIdolName(event: string){
+    this.setting.data.idolName = this.idolName = event;
+    this.setting.save();
+  }
+
+  changeIdolType(event: string){
+    this.setting.data.idolType = this.idolType = event;
+    this.setting.save();
+  }
+
+  changeSortType(event: string){
+    this.setting.data.sortType = this.sortType = event;
+    this.setting.save();
+  }
+
+  changeSortMode(event: string){
+    this.setting.data.sortMode = this.sortMode = event;
+    this.setting.save();
+  }
 }
