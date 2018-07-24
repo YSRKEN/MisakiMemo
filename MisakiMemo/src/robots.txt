@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://misakimemo-a6680.firebaseapp.com/sitemap.xml
