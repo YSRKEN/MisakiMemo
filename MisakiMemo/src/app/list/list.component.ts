@@ -70,21 +70,18 @@ export class ListComponent implements OnInit {
         } else {
           return list.filter(n => typeof filter[n.name] == "undefined").sort((a, b) => a.id > b.id ? 1 : a.id < b.id ? -1 : 0);
         }
-        break;
       case "アイドル名":
         if (descFlg) {
           return list.filter(n => typeof filter[n.name] == "undefined").sort((b, a) => a.ruby > b.ruby ? 1 : a.ruby < b.ruby ? -1 : 0);
         } else {
           return list.filter(n => typeof filter[n.name] == "undefined").sort((a, b) => a.ruby > b.ruby ? 1 : a.ruby < b.ruby ? -1 : 0);
         }
-        break;
       case "進捗":
         if (descFlg) {
           return list.filter(n => typeof filter[n.name] == "undefined").sort((b, a) => parseInt(a.step) > parseInt(b.step) ? 1 : parseInt(a.step) < parseInt(b.step) ? -1 : 0);
         } else {
           return list.filter(n => typeof filter[n.name] == "undefined").sort((a, b) => parseInt(a.step) > parseInt(b.step) ? 1 : parseInt(a.step) < parseInt(b.step) ? -1 : 0);
         }
-        break;
       default:
         return list.filter(n => typeof filter[n.name] == "undefined");
     }
