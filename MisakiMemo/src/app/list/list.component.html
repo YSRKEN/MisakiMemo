@@ -8,15 +8,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let idolName of idolNameList">
-        <td class="text-nowrap">{{idolName}}</td>
+      <tr *ngFor="let idol of idolList">
+        <td class="text-nowrap">{{idol.name}}</td>
         <td>
-          <select class="w-100 mt-0_5">
-            <option *ngFor="let step of stepList(idolName)" value={{step.key}}>{{step.value}}</option>
+          <select class="w-100 mt-0_5" [ngModel]="idol.step" (ngModelChange)="changeStep($event, idol.name)">
+            <option *ngFor="let steps of stepList(idol.name)" value={{steps.key}}>{{steps.value}}</option>
           </select>
         </td>
         <td>
-          <input type="text" class="w-100">
+          <input type="text" class="w-100" [ngModel]="idol.comment" (ngModelChange)="changeComment($event, idol.name)">
         </td>
       </tr>
     </tbody>

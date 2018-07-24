@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Setting } from './Setting';
+import { DatabaseService } from './database.service';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,12 @@ export class SettingService {
     if(saveData != null){
       this.data.fromString(saveData);
     }
+  }
+
+  /**
+   * 設定を保存する
+   */
+  save(){
+    this.saveFunc(this.data.toString());
   }
 }

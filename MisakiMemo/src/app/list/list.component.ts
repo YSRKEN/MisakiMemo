@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../service/database.service';
 import { SettingService } from '../service/setting.service';
+import { IdolMemo } from '../service/IdolMemo';
 
 @Component({
   selector: 'app-list',
@@ -14,6 +15,8 @@ export class ListComponent implements OnInit {
    */
   private idolNameToMusic: {[key: string]: string} = {};
 
+  private idolHash: {[key: string]: number} = {};
+
   /**
    * コンストラクタ
    * @param database データベースサービス
@@ -23,7 +26,10 @@ export class ListComponent implements OnInit {
   }
 
   async ngOnInit() {
+    let index = 0;
     for(let idol of await this.database.getIdolList()){
+      this.idolHash[idol.name] = index;
+      ++index;
       this.idolNameToMusic[idol.name] = idol.music;
     }
   }
@@ -31,7 +37,7 @@ export class ListComponent implements OnInit {
   /**
    * アイドル一覧を返却する
    */
-  get idolNameList(): string[]{
+  get idolList(): IdolMemo[]{
     let list = this.database.IdolList;
 
     // キャラ名フィルタ
@@ -67,7 +73,13 @@ export class ListComponent implements OnInit {
       break;
     }
 
-    return list.map(idol => idol.name);
+    const hash = {};
+    for(let temp of list){
+      hash[temp.name] = true;
+    }
+
+    const stepMemo = this.setting.data.idolStepMemo;
+    return stepMemo.filter(key => hash[key.name] != null);
   }
 
   /**
@@ -89,5 +101,25 @@ export class ListComponent implements OnInit {
       {key: "12", value: "完了！"}
     ];
     return temp;
+  }
+
+  /**
+   * 進捗を変更
+   * @param step 進捗
+   * @param name アイドル名
+   */
+  changeStep(step: string, name: string){
+    this.setting.data.idolStepMemo[this.idolHash[name]].step = step;
+    this.setting.save();
+  }
+
+  /**
+   * 詳細を変更
+   * @param comment 詳細
+   * @param name アイドル名
+   */
+  changeComment(comment: string, name: string){
+    this.setting.data.idolStepMemo[this.idolHash[name]].comment = comment;
+    this.setting.save();
   }
 }

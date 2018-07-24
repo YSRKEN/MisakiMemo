@@ -1,4 +1,5 @@
 import { ReactiveProperty } from "../model/ReactiveProperty";
+import { IdolMemo } from "./IdolMemo";
 
 /**
  * 設定情報を格納するクラス
@@ -23,6 +24,11 @@ export class Setting {
      * リストの並び替え方向
      */
     sortMode = new ReactiveProperty<string>("昇順");
+
+    /**
+     * アイドル毎の進捗状況
+     */
+    idolStepMemo: IdolMemo[] = [];
 
     /**
      * 設定を保存するメソッド
@@ -53,6 +59,15 @@ export class Setting {
         this.idolType.value = data["idolType"];
         this.sortType.value = data["sortType"];
         this.sortMode.value = data["sortMode"];
+        const temp: IdolMemo[] = data["idolStepMemo"];
+        this.idolStepMemo = [];
+        for(let temp2 of temp){
+            const idolMemo = new IdolMemo();
+            idolMemo.name = temp2.name;
+            idolMemo.step = temp2.step;
+            idolMemo.comment = temp2.comment;
+            this.idolStepMemo.push(idolMemo);
+        }
     }
 
     /**
@@ -64,6 +79,7 @@ export class Setting {
         data["idolType"] = this.idolType.value;
         data["sortType"] = this.sortType.value;
         data["sortMode"] = this.sortMode.value;
+        data["idolStepMemo"] = this.idolStepMemo;
         return JSON.stringify(data);
     }
 }
