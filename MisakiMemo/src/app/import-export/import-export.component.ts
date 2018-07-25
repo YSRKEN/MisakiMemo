@@ -39,7 +39,6 @@ export class ImportExportComponent implements OnInit {
 
   /**
    * Base64形式のデータからセーブデータをインポートする
-   * EjRWeJq8d3d3d3d3d3d3d3d3d3d3d3d3d3c=
    */
   importSaveData() {
     try {
