@@ -15,7 +15,28 @@ export class ListComponent implements OnInit {
    */
   private idolNameToMusic: { [key: string]: string } = {};
 
+  /**
+   * アイドル名→インデックスの対応表
+   */
   private idolHash: { [key: string]: number } = {};
+
+  /**
+   * 曲名→順番の対応表
+   */
+  private musicHash: { [key: string]: number } = {
+    "合言葉はスタートアップ！": 1,
+    "Growing Storm!": 2,
+    "Shooting Stars": 3,
+    "Eternal Harmony": 4,
+    "HOME, SWEET FRIENDSHIP": 5,
+    "ジレるハートに火をつけて": 6,
+    "Birth of Color": 7,
+    "ドリームトラベラー": 8,
+    "星屑のシンフォニア": 9,
+    "STANDING ALIVE": 10,
+    "Melty Fantasia": 11,
+    "花ざかりWeekend✿": 12,
+  };
 
   /**
    * コンストラクタ
@@ -26,6 +47,7 @@ export class ListComponent implements OnInit {
   }
 
   async ngOnInit() {
+    // idolHashとidolNameToMusicの初期化
     let index = 0;
     for (let idol of await this.database.getIdolList()) {
       this.idolHash[idol.name] = index;
@@ -81,6 +103,12 @@ export class ListComponent implements OnInit {
           return list.filter(n => typeof filter[n.name] == "undefined").sort((b, a) => parseInt(a.step) > parseInt(b.step) ? 1 : parseInt(a.step) < parseInt(b.step) ? -1 : 0);
         } else {
           return list.filter(n => typeof filter[n.name] == "undefined").sort((a, b) => parseInt(a.step) > parseInt(b.step) ? 1 : parseInt(a.step) < parseInt(b.step) ? -1 : 0);
+        }
+      case "指定曲":
+        if (descFlg) {
+          return list.filter(n => typeof filter[n.name] == "undefined").sort((b, a) => this.musicHash[a.music] > this.musicHash[b.music] ? 1 : this.musicHash[a.music] < this.musicHash[b.music] ? -1 : 0);
+        } else {
+          return list.filter(n => typeof filter[n.name] == "undefined").sort((a, b) => this.musicHash[a.music] > this.musicHash[b.music] ? 1 : this.musicHash[a.music] < this.musicHash[b.music] ? -1 : 0);
         }
       default:
         return list.filter(n => typeof filter[n.name] == "undefined");
