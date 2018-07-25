@@ -38,4 +38,22 @@ export class MainComponent implements OnInit {
     }
   }
 
+  ngAfterViewInit(){
+    var element = document.createElement('a');
+    element.setAttribute('href',"https://twitter.com/share?ref_src=twsrc%5Etfw");
+    element.setAttribute('class',"twitter-share-button");
+    element.setAttribute('data-size',"large");
+    element.setAttribute('data-text',"一周年記念ミッション管理ツール「美咲メモ」");
+    element.setAttribute('data-url',"https://misakimemo-a6680.firebaseapp.com");
+    element.setAttribute('data-show-count',"false");
+
+    var script = document.createElement('script');
+    script.async = true;
+    script.setAttribute('src',"https://platform.twitter.com/widgets.js");
+    script.setAttribute('charset','utf-8');
+
+    var div = document.getElementById("anchor");
+    div.parentNode.insertBefore(element,div.nextSibling);
+    div.parentNode.insertBefore(script,div.nextSibling);
+  }
 }
