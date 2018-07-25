@@ -13,13 +13,15 @@ import { ListComponent } from './list/list.component';
 import { SettingService } from './service/setting.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DatabaseService } from './service/database.service';
+import { ImportExportComponent } from './import-export/import-export.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     FilterComponent,
-    ListComponent
+    ListComponent,
+    ImportExportComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
