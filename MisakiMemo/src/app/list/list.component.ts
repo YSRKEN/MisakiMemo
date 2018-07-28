@@ -82,6 +82,15 @@ export class ListComponent implements OnInit {
         }
       }
     }
+    // ライブ関係のみ表示フィルタ
+    if(this.setting.data.liveOnlyFlg){
+      const okList = ["1", "2", "3", "7", "8", "10"];
+      for(let x of list){
+        if(!okList.includes(x.step)){
+          filter[x.name] = true;
+        }
+      }
+    }
 
     // フィルタ・ソート処理
     const descFlg = (this.setting.data.sortMode == "降順");
