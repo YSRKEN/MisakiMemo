@@ -36,4 +36,20 @@ export class IdolMemo{
      * アイドルに割り振られた楽曲
      */
     music: string;
+
+    /**
+     * アイドルの属性マーク
+     */
+    get type2(): {}{
+        switch(this.type){
+            case "Princess":
+            return {color: "hotpink"};
+            case "Fairy":
+            return {color: "dodgerblue"};
+            case "Angel":
+            return {color: "orange"};
+            default:
+            return {color: "black"};
+        }
+    }
 }
