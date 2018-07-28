@@ -28,6 +28,11 @@ export class FilterComponent implements OnInit {
    */
   sortMode = this.setting.data.sortMode;
 
+  /**
+   * ライブ関係のみ標示するか？
+   */
+  liveOnlyFlg = this.setting.data.liveOnlyFlg;
+
   constructor(private setting: SettingService) { }
 
   ngOnInit() {
@@ -50,6 +55,11 @@ export class FilterComponent implements OnInit {
 
   changeSortMode(event: string){
     this.setting.data.sortMode = this.sortMode = event;
+    this.setting.save();
+  }
+
+  changeLiveOnlyFlg(){
+    this.setting.data.liveOnlyFlg = this.liveOnlyFlg;
     this.setting.save();
   }
 }

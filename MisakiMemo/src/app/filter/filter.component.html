@@ -1,5 +1,5 @@
 <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto my-3">
-  <form class="border p-3">
+  <form class="border pt-3 px-3">
     <div class="form-group d-flex">
       <label class="text-nowrap mr-3 mt-1_5" for="idolName">キャラ名</label>
       <input type="text" class="form-control" id="idolName" name="idolName" placeholder="キャラ名で絞り込み"
@@ -29,6 +29,11 @@
         <option class="font-weight-bold">昇順</option>
         <option class="font-weight-bold">降順</option>
       </select>
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="liveOnlyFlg" name="liveOnlyFlg"
+      [(ngModel)]="liveOnlyFlg" (change)="changeLiveOnlyFlg()">
+      <label class="form-check-label" for="liveOnlyFlg">ライブ関係のみ標示する</label>
     </div>
   </form>
 </div>

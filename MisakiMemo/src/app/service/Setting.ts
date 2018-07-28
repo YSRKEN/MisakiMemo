@@ -25,6 +25,11 @@ export class Setting {
     sortMode = "昇順";
 
     /**
+     * ライブ関係のみ標示するか？
+     */
+    liveOnlyFlg = false;
+
+    /**
      * アイドル毎の進捗状況
      */
     idolStepMemo: IdolMemo[] = [];
@@ -39,6 +44,10 @@ export class Setting {
         this.idolType = data["idolType"];
         this.sortType = data["sortType"];
         this.sortMode = data["sortMode"];
+        this.liveOnlyFlg = data["liveOnlyFlg"];
+        if(typeof this.liveOnlyFlg == "undefined"){
+            this.liveOnlyFlg = false;
+        }
         const temp: IdolMemo[] = data["idolStepMemo"];
         this.idolStepMemo = [];
         for(let temp2 of temp){
@@ -63,6 +72,7 @@ export class Setting {
         data["idolType"] = this.idolType;
         data["sortType"] = this.sortType;
         data["sortMode"] = this.sortMode;
+        data["liveOnlyFlg"] = this.liveOnlyFlg;
         data["idolStepMemo"] = this.idolStepMemo;
         return JSON.stringify(data);
     }
