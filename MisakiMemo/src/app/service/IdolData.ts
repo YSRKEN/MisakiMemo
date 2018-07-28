@@ -26,4 +26,9 @@ export class IdolData{
      * アイドルに割り振られた楽曲
      */
     music: string;
+
+    /**
+     * アイドルに割り振られたイメージカラー
+     */
+    color: string;
 }

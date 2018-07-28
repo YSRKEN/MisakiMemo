@@ -31,6 +31,7 @@ export class DatabaseService {
           idol.ruby = temp2[1];
           idol.type = temp2[2];
           idol.music = temp2[3];
+          idol.color = temp2[4];
           this.IdolList.push(idol);
           ++id;
         }

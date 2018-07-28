@@ -25,9 +25,14 @@ export class Setting {
     sortMode = "昇順";
 
     /**
-     * ライブ関係のみ標示するか？
+     * ライブ関係のみ表示するか？
      */
     liveOnlyFlg = false;
+
+    /**
+     * イメージカラー表示にするか？
+     */
+    imageColorFlg = false;
 
     /**
      * アイドル毎の進捗状況
@@ -48,6 +53,10 @@ export class Setting {
         if(typeof this.liveOnlyFlg == "undefined"){
             this.liveOnlyFlg = false;
         }
+        this.imageColorFlg = data["imageColorFlg"];
+        if(typeof this.imageColorFlg == "undefined"){
+            this.imageColorFlg = false;
+        }
         const temp: IdolMemo[] = data["idolStepMemo"];
         this.idolStepMemo = [];
         for(let temp2 of temp){
@@ -58,6 +67,11 @@ export class Setting {
             idolMemo.music = temp2.music;
             idolMemo.ruby = temp2.ruby;
             idolMemo.type = temp2.type;
+            if(typeof temp2.color == "undefined"){
+                idolMemo.color = "#00000";
+            }else{
+                idolMemo.color = temp2.color;
+            }
             idolMemo.comment = temp2.comment;
             this.idolStepMemo.push(idolMemo);
         }
@@ -73,6 +87,7 @@ export class Setting {
         data["sortType"] = this.sortType;
         data["sortMode"] = this.sortMode;
         data["liveOnlyFlg"] = this.liveOnlyFlg;
+        data["imageColorFlg"] = this.imageColorFlg;
         data["idolStepMemo"] = this.idolStepMemo;
         return JSON.stringify(data);
     }

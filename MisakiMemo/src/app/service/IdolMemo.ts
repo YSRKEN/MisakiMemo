@@ -38,6 +38,11 @@ export class IdolMemo{
     music: string;
 
     /**
+     * アイドルに割り振られたイメージカラー
+     */
+    color: string;
+
+    /**
      * アイドルの属性マーク
      */
     get type2(): {}{
@@ -51,5 +56,12 @@ export class IdolMemo{
             default:
             return {color: "black"};
         }
+    }
+
+    /**
+     * アイドルの属性マーク
+     */
+    get type3(): {}{
+        return {color: this.color};
     }
 }

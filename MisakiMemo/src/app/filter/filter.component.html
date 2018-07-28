@@ -35,5 +35,10 @@
       [(ngModel)]="liveOnlyFlg" (change)="changeLiveOnlyFlg()">
       <label class="form-check-label" for="liveOnlyFlg">ライブ関係のみ表示する</label>
     </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="imageColorFlg" name="imageColorFlg"
+      [(ngModel)]="imageColorFlg" (change)="changeImageColorFlg()">
+      <label class="form-check-label" for="imageColorFlg">イメージカラー表示にする</label>
+    </div>
   </form>
 </div>

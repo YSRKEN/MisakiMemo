@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../service/database.service';
 import { SettingService } from '../service/setting.service';
 import { IdolMemo } from '../service/IdolMemo';
+import { Setting } from '../service/Setting';
 
 @Component({
   selector: 'app-list',
@@ -38,6 +39,8 @@ export class ListComponent implements OnInit {
     "花ざかりWeekend✿": 12,
   };
 
+  setting_: Setting; 
+
   /**
    * コンストラクタ
    * @param database データベースサービス
@@ -47,6 +50,7 @@ export class ListComponent implements OnInit {
   }
 
   async ngOnInit() {
+    this.setting_ = this.setting.data;
     // idolHashとidolNameToMusicの初期化
     let index = 0;
     for (let idol of await this.database.getIdolList()) {

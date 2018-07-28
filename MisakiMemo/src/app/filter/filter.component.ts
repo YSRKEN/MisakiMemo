@@ -33,6 +33,11 @@ export class FilterComponent implements OnInit {
    */
   liveOnlyFlg = this.setting.data.liveOnlyFlg;
 
+  /**
+   * イメージカラー表示にするか？
+   */
+  imageColorFlg = this.setting.data.imageColorFlg;
+  
   constructor(private setting: SettingService) { }
 
   ngOnInit() {
@@ -60,6 +65,11 @@ export class FilterComponent implements OnInit {
 
   changeLiveOnlyFlg(){
     this.setting.data.liveOnlyFlg = this.liveOnlyFlg;
+    this.setting.save();
+  }
+
+  changeImageColorFlg(){
+    this.setting.data.imageColorFlg = this.imageColorFlg;
     this.setting.save();
   }
 }

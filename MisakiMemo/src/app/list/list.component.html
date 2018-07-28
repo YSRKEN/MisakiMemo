@@ -9,7 +9,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let idol of idolList">
-        <td class="text-nowrap"><span [ngStyle]="idol.type2">■</span> {{idol.name}}</td>
+        <td class="text-nowrap"><span [ngStyle]="setting_.imageColorFlg ? idol.type3 : idol.type2">■</span> {{idol.name}}</td>
         <td>
           <select class="w-100 mt-0_5" [ngModel]="idol.step" (ngModelChange)="changeStep($event, idol.name)">
             <option *ngFor="let steps of stepList(idol.name)" value={{steps.key}}>{{steps.value}}</option>

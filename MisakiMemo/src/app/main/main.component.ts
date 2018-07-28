@@ -25,6 +25,7 @@ export class MainComponent implements OnInit {
         idolMemo.music = list[i].music;
         idolMemo.ruby = list[i].ruby;
         idolMemo.type = list[i].type;
+        idolMemo.color = list[i].color;
         this.setting.data.idolStepMemo.push(idolMemo);
       }
       this.setting.save();
@@ -33,6 +34,7 @@ export class MainComponent implements OnInit {
       const size = list.length;
       for(let i = 0; i < size; ++i){
         this.setting.data.idolStepMemo[i].music = list[i].music;
+        this.setting.data.idolStepMemo[i].color = list[i].color;
       }
       this.setting.save();
     }
