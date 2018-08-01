@@ -113,9 +113,9 @@ export class ListComponent implements OnInit {
         }
       case "進捗":
         if (descFlg) {
-          return list.filter(n => typeof filter[n.name] == "undefined").sort((b, a) => parseInt(a.step) > parseInt(b.step) ? 1 : parseInt(a.step) < parseInt(b.step) ? -1 : 0);
+          return list.filter(n => typeof filter[n.name] == "undefined").sort((b, a) => parseInt(a.step) > parseInt(b.step) ? 1 : parseInt(a.step) < parseInt(b.step) ? -1 : this.musicHash[a.music] > this.musicHash[b.music] ? 1 : this.musicHash[a.music] < this.musicHash[b.music] ? -1 : 0);
         } else {
-          return list.filter(n => typeof filter[n.name] == "undefined").sort((a, b) => parseInt(a.step) > parseInt(b.step) ? 1 : parseInt(a.step) < parseInt(b.step) ? -1 : 0);
+          return list.filter(n => typeof filter[n.name] == "undefined").sort((a, b) => parseInt(a.step) > parseInt(b.step) ? 1 : parseInt(a.step) < parseInt(b.step) ? -1 : this.musicHash[a.music] > this.musicHash[b.music] ? 1 : this.musicHash[a.music] < this.musicHash[b.music] ? -1 : 0);
         }
       case "指定曲":
         if (descFlg) {
