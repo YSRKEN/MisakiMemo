@@ -41,6 +41,9 @@ export class ImportExportComponent implements OnInit {
    * Base64形式のデータからセーブデータをインポートする
    */
   importSaveData() {
+    if(!window.confirm("セーブデータをインポートしますか？\n(入力されたデータは上書きされます))")){
+      return;
+    }
     try {
       // Base64文字列をデコードする
       const saveDataStr = atob(this.saveData);
